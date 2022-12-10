@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.q set filetype=q
+au BufNewFile,BufRead *.q setfiletype q

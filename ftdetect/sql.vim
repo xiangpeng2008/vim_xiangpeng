@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.s set filetype=sql
+au BufNewFile,BufRead *.s setfiletype sql
