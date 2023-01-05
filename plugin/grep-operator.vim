@@ -13,9 +13,10 @@ function! s:GrepOperator(type)
         return
     endif
 
-    "silent execute "grep! -R " . shellescape(@@) . " ."
-    execute "grep! -R " . shellescape(@@) . " ."
+    silent execute "grep! -IsR --exclude-dir={ds_qds_square_models_git_*,*.venv,*_backup,archive,notes,.git,parquet,data,tests,bartest,static,dependencies,regtests,datasources/prod_setup,square_daily_equity_model/datasets} --exclude={*.ipynb,*tmp*,debug.*,*.so,*.js,*.csv,*.jpg,*.png} " . shellescape(@@) . " ."
+    "execute "grep! --exclude-dir={\*.venv,archive,notes,.git,parquet} -R " . shellescape(@@) . " ."
     copen
+    execute "redraw!"
 
     let @@ = saved_unnamed_register
 endfunction
