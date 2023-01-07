@@ -1,4 +1,5 @@
 
+" the functions are global
 function! Sorted(l)
     let new_list = deepcopy(a:l)
     call sort(new_list)

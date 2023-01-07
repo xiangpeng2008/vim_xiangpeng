@@ -1,17 +1,6 @@
 
-
-setlocal foldmethod=indent
-set foldlevel=99
-
-" add . as word separator
-setlocal iskeyword-=.
-set iskeyword-=.
-" remove _ from word separator
-setlocal iskeyword+=_
-
-" to see the docstrings for folded code
-let g:SimpylFold_docstring_preview=1
-
+" skip /opt/homebrew/Cellar/vim/9.0.0800/share/vim/vim90/ftplugin/python.vim 
+let b:did_ftplugin = 1 
 "setlocal tabstop=4
 "setlocal softtabstop=4
 "setlocal shiftwidth=4
@@ -20,6 +9,7 @@ let g:SimpylFold_docstring_preview=1
 "setlocal autoindent
 setlocal fileformat=unix
 
+" enable all Python syntax highlighting features
 let python_highlight_all=1
 
 augroup autocmd_python
