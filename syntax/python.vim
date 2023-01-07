@@ -4,5 +4,5 @@ endif
 
 let b:current_python_syntax = "python"
 
-syntax keyword potionKeyword for abd
+syntax keyword potionKeyword for 
 highlight link potionKeyword Keyword
