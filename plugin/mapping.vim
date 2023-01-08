@@ -9,8 +9,8 @@ nnoremap _ ddkkp
 inoremap <esc> <esc>:w<cr>   
 
 " convert the current word to uppercase in insert and normal mode
-inoremap <c-u> <esc>viwUe
-nnoremap <c-u> viwUe
+inoremap <leader>u <esc>viwUe
+nnoremap <leader>u viwUe
 
 " open current path in a new tab
 nnoremap gf <C-W>gf
@@ -162,6 +162,6 @@ nnoremap <leader>N :cprevious<CR>
 nnoremap <Leader>wf <Plug>VimwikiFollowLink
 
 " nerdtree
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-t> :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTreeVCS<CR>
 " }}}
