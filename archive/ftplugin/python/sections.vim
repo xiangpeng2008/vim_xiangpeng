@@ -1,7 +1,7 @@
-
-function! s:NextSection(type, backwards)
-endfunction
-
+" for improve
+"finish
+"will use folder motion
+" [z ]z zj zk
 noremap <script> <buffer> <silent> ]]
         \ :call <SID>NextSection(1, 0, 0)<cr>
 

@@ -129,7 +129,7 @@ inoremap <C-D> <C-X><C-D>
 inoremap <C-L> <C-X><C-L>
 
 " set S to save
-noremap S :update<CR>
+nnoremap S :update<CR>
 
 " set fold mode
 "set foldmethod=syntax
@@ -160,4 +160,8 @@ nnoremap <leader>N :cprevious<CR>
 
 " Follow/create wiki link (create target wiki page if needed).
 nnoremap <Leader>wf <Plug>VimwikiFollowLink
+
+" nerdtree
+nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-n> :NERDTreeVCS<CR>
 " }}}
