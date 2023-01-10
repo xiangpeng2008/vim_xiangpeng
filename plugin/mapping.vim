@@ -6,7 +6,7 @@ nnoremap - ddp
 nnoremap _ ddkkp
 
 " save when exists insert mode
-inoremap <esc> <esc>:w<cr>   
+inoremap <esc> <esc>:w<cr>
 
 " convert the current word to uppercase in insert and normal mode
 inoremap <leader>u <esc>viwUe
@@ -17,7 +17,7 @@ nnoremap gf <C-W>gf
 vnoremap gf <C-W>gf
 
 "swich between panes in vim
-noremap<c-w> <c-w><c-w>
+noremap<c-s> <c-w><c-w>
 " switch to last buffer
 noremap <c-7> :b#<cr>
 
@@ -25,6 +25,9 @@ noremap <c-7> :b#<cr>
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" to double check
+nnoremap p "0p
+nnoremap t p
 " the text inside the parentheses https://learnvimscriptthehardway.stevelosh.com/chapters/15.htmlS
 onoremap p i(
 onoremap , f,
@@ -60,15 +63,18 @@ onoremap al{ :<c-u>execute "normal! ?}\r:nohlsearch\rvF{"<cr>
 onoremap al[ :<c-u>execute "normal! ?]\r:nohlsearch\rvF["<cr>
 
 " The CTRL-U (<C-U>) is used to remove the range that Vim may insert.  The Normal mode commands find the first '(' character and select the first word before it.  That usually is the function name.
-onoremap <silent> F :<C-U>normal! 0f(hviw<CR> 
+onoremap <silent> F :<C-U>normal! 0f(hviw<CR>
 
 onoremap ah :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rg_vk0"<cr>
 onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
 
 " send block and stay to the end of block
 " map ; to :
+" map ; to : easier go to cmd mode
 nnoremap ; :
+nnoremap : ;
 vnoremap ; :
+vnoremap : ;
 
 "surround the word in ",',() in normal mode
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
@@ -119,7 +125,7 @@ nnoremap <leader>ep :tabe /Users/xiangpeng/Documents/Tools/pylib/prototypeLib.py
 "nnoremap <CR> o<Esc>
 
 " map esc to be esc l in insert mode
-inoremap <esc> <esc>l
+inoremap <esc> <esc>:w<cr>l
 inoremap <C-d> <Del>
 
 "help ins-completion
@@ -150,6 +156,7 @@ nnoremap <leader>t0 :tabm 0<CR>
 
 nnoremap <F10> :b <C-Z>
 
+" to put in h, cpp local buffer
 " switch between h and cpp
 nnoremap <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 nnoremap / /\v
@@ -164,4 +171,28 @@ nnoremap <Leader>wf <Plug>VimwikiFollowLink
 " nerdtree
 nnoremap <C-t> :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTreeVCS<CR>
+" to double check, this is only for linux
+"edit qlib in a vertical split
+nnoremap <leader>eq :tabe /sqpc/scratch/intraday/zhangxia/lib/lib.q<cr>
+nnoremap <leader>ea :tabe /sqpc/scratch/intraday/zhangxia/lib/analysis.q<cr>
+nnoremap <leader>ep :-1tabe /sqpc/scratch/intraday/zhangxia/lib/prototypeLib.py<cr>
+
+" ,s for selecting panel
+nnoremap <leader>s :SlimuxREPLConfigure<CR>
+vnoremap <C-c>     :SlimuxREPLSendSelection<CR>`>
+nnoremap <C-c>     :SlimuxREPLSendLine<CR>^
+inoremap <C-c>     <esc>:SlimuxREPLSendLine<CR>^
+nnoremap <C-w>     viw:SlimuxREPLSendSelection<CR>
+
+
+" put innerest foldername
+"nnoremap <leader>pf :put =expand('%:p:h:t')<CR>
+nnoremap <leader>pf :put =expand('%:p')<CR>
+
+" In insert or command mode, move normally by using Ctrl
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
 " }}}
