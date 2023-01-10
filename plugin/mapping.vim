@@ -195,4 +195,26 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
+" start of line
+cnoremap <C-A>		<Home>
+" back one character
+cnoremap <C-B>		<Left>
+" delete character under cursor
+cnoremap <C-D>		<Del>
+" end of line
+cnoremap <C-E>		<End>
+" forward one character
+cnoremap <C-F>		<Right>
+" recall newer command-line
+cnoremap <C-N>		<Down>
+" recall previous (older) command-line
+cnoremap <C-P>		<Up>
+" back one word
+cnoremap <Esc><C-B>	<S-Left>
+" forward one word
+cnoremap <Esc><C-F>	<S-Right>
+
+"These two mappings reduce a sequence of empty (;b) or blank (;n) lines into a single line >
+nnoremap <leader>;b   GoZ<Esc>:g/^$/.,/./-j<CR>Gdd
+nnoremap <leader>;n   GoZ<Esc>:g/^[ <Tab>]*$/.,/[^ <Tab>]/-j<CR>Gdd
 " }}}
