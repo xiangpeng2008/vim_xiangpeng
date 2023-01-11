@@ -17,7 +17,6 @@ augroup autocmd_python
     autocmd BufWritePre <buffer> %s/\s\+$//e
 augroup END
 
-nmap <c-f> 0V]M <c-c>j
 
 " send function to slimux with CTRL+f
 nmap <buffer> <c-f> 0V]M<c-c>j
@@ -25,6 +24,8 @@ iabbrev <buffer> pdf pd.DataFrame(
 iabbrev <buffer> pds pd.Series(
 iabbrev <buffer> deff def():<left><left><left>
 iabbrev <buffer> iff if:<left>
+iabbrev <buffer> plib load('/sqpc/scratch/intraday/zhangxia/lib/prototypeLib.ipy')
+set iskeyword-=.
 if $TERM !=# "xterm-kitty"
     nnoremap <buffer> <leader>q Oq<esc>:SlimuxREPLSendLine<CR>dd
 else
@@ -37,5 +38,9 @@ nnoremap <buffer> <leader>h IcoloredHelp(<esc> A) <esc>:SlimuxREPLSendLine<CR>
 
 " press <leader>pl to plot in python
 nnoremap <buffer> <leader>pl Iplot(<esc> A) <esc>:SlimuxREPLSendLine<CR>
+" send function to slimux with CTRL+[
+nnoremap <buffer> <c-f> 0V]M<c-c>j
+nnoremap <leader>pd Oimport pdb; pdb.set_trace()<esc>j
+
 
 
