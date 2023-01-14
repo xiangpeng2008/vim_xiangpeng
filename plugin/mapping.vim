@@ -1,5 +1,5 @@
 
-" mappings ------------ {{{
+jkmappings ------------ {{{
 " shift this line down
 nnoremap - ddp
 "shift this line up
