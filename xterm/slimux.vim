@@ -1,10 +1,16 @@
 
+
+" ,s for selecting panel
+nnoremap <leader>s :SlimuxREPLConfigure<CR>
+vnoremap <C-c>     :SlimuxREPLSendSelection<CR>`>
+nnoremap <C-c>     :SlimuxREPLSendLine<CR>^
+inoremap <C-c>     <esc>:SlimuxREPLSendLine<CR>^
+nnoremap <C-w>     viw:SlimuxREPLSendSelection<CR>
+
+
 nnoremap <c-f> 0v%:SlimuxREPLSendSelection<CR>%
 " send to slimux
-nnoremap <c-c> :SlimuxREPLSendLine<CR>
-inoremap <c-c> <esc>:SlimuxREPLSendLine<CR>
 " send block and stay to the end of block
-vnoremap <c-c> :SlimuxREPLSendSelection<CR>`>
 
 let g:slimux_select_from_current_window = 1
 
@@ -31,7 +37,6 @@ nnoremap <leader>pq yiwo<esc>pIplotPyq[;"line";""] <esc>:SlimuxREPLSendLine<CR>d
 nnoremap <leader>h Ihelp(<esc> A) <esc>:SlimuxREPLSendLine<CR>
 
 " ,s for selecting panel
-nnoremap <leader>s :SlimuxREPLConfigure<CR>
 
 " grep mapping
 " press <leader>ge to grep -nr [this workd] ./*

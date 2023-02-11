@@ -177,12 +177,6 @@ nnoremap <leader>eq :tabe /sqpc/scratch/intraday/zhangxia/lib/lib.q<cr>
 nnoremap <leader>ea :tabe /sqpc/scratch/intraday/zhangxia/lib/analysis.q<cr>
 nnoremap <leader>ep :-1tabe /sqpc/scratch/intraday/zhangxia/lib/prototypeLib.py<cr>
 
-" ,s for selecting panel
-nnoremap <leader>s :SlimuxREPLConfigure<CR>
-vnoremap <C-c>     :SlimuxREPLSendSelection<CR>`>
-nnoremap <C-c>     :SlimuxREPLSendLine<CR>^
-inoremap <C-c>     <esc>:SlimuxREPLSendLine<CR>^
-nnoremap <C-w>     viw:SlimuxREPLSendSelection<CR>
 
 
 " put innerest foldername
