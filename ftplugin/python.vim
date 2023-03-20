@@ -30,7 +30,6 @@ set iskeyword-=.
 if $TERM !=# "xterm-kitty"
     nnoremap <buffer> <leader>q Oq<esc>:SlimuxREPLSendLine<CR>dd
 else
-    "nnoremap <buffer> <leader>q Oq<esc><Plug>SlimeLineSend
     nnoremap <buffer> <leader>q Oq<esc>:<c-u>call slime#send_lines(v:count1)<cr>dd
 endif
 
