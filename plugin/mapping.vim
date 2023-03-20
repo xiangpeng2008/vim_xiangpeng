@@ -211,4 +211,9 @@ cnoremap <Esc><C-F>	<S-Right>
 "These two mappings reduce a sequence of empty (;b) or blank (;n) lines into a single line >
 nnoremap <leader>;b   GoZ<Esc>:g/^$/.,/./-j<CR>Gdd
 nnoremap <leader>;n   GoZ<Esc>:g/^[ <Tab>]*$/.,/[^ <Tab>]/-j<CR>Gdd
+
+" mapping for copilot
+"inoremap <C-[> <Plug>(copilot-previous)
+" have a bug currently, after pressing <C-[>, <ESC> will not work
+inoremap <C-[> <Plug>(copilot-next)
 " }}}

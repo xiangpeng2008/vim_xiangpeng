@@ -7,7 +7,8 @@ let b:did_ftplugin = 1
 "setlocal textwidth=79
 "setlocal expandtab
 "setlocal autoindent
-setlocal fileformat=unix
+" commented for copilot
+"setlocal fileformat=unix
 
 " enable all Python syntax highlighting features
 let python_highlight_all=1
@@ -19,7 +20,7 @@ augroup END
 
 
 " send function to slimux with CTRL+f
-nmap <buffer> <c-f> 0V]M<c-c>j
+"nmap <buffer> <c-f> 0V]M<c-c>j
 iabbrev <buffer> pdf pd.DataFrame(
 iabbrev <buffer> pds pd.Series(
 iabbrev <buffer> deff def():<left><left><left>
@@ -39,7 +40,8 @@ nnoremap <buffer> <leader>h IcoloredHelp(<esc> A) <esc>:SlimuxREPLSendLine<CR>
 " press <leader>pl to plot in python
 nnoremap <buffer> <leader>pl Iplot(<esc> A) <esc>:SlimuxREPLSendLine<CR>
 " send function to slimux with CTRL+[
-nnoremap <buffer> <c-f> 0V]M<c-c>j
+"nnoremap <buffer> <c-f> 0V]z<c-c>j
+nnoremap <buffer> <c-f> 0V]z<Plug>SlimeRegionSend<cr>
 nnoremap <leader>pd Oimport pdb; pdb.set_trace()<esc>j
 
 

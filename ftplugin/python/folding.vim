@@ -17,14 +17,6 @@ let g:SimpylFold_docstring_preview=1
 
 setlocal foldexpr=<SID>GetPythonFold(v:lnum)
 
-"function! GetPotionFold(lnum)
-    "if getline(a:lnum) =~? '\v^\s*$'
-        "return '-1'
-    "endif
-
-    "return '0'
-"endfunction
-
 function! s:IndentLevel(lnum)
     return indent(a:lnum) / &shiftwidth
 endfunction
