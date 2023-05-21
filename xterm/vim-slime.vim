@@ -7,4 +7,5 @@ nnoremap <c-c> <Plug>SlimeLineSend
 inoremap <c-c> <esc><Plug>SlimeLineSend
 xnoremap <c-c> <Plug>SlimeRegionSend
 nnoremap <c-s> <Plug>SlimeConfig
+nnoremap <C-w> viw<Plug>SlimeRegionSend
 
